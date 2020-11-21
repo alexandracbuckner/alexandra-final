@@ -1,0 +1,22 @@
+{% extends '_templates/base.njk' %}
+
+{% block page_title %}Discography{% endblock %}
+
+{% block content %}
+<article class="container">
+  <h2>Discography</h2>
+  <div class="row">
+  {% for album in queen.discography %}
+      <div class="col-sm-6 col-lg-3">
+        <div class="card">
+          <img class="card-img-top" src="img/discs/{{ album.image }}" alt="" class="img-fluid">
+          <div class="card-body">
+            <h5 class="card-title">{{album.title}}</h5>
+            <h6 class="card-title">{{album.year}}</h5>
+          </div>
+        </div>
+      </div>
+  {% endfor %}
+  </div>
+</article>
+{% endblock %}
