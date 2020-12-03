@@ -12,12 +12,33 @@
   <div class="row">
     {% for member in queen.members %}
       <div class="col-sm-6 col-lg-3">
-        <div class="card text-white bg-dark mb-3">
-          <img class="card-img-top" src="img/members/{{ member.image }}" alt="" class="img-fluid">
+        <div class="card border-light text-white bg-dark mb-3">
+          <img class="card-img-top" src="img/members/{{ member.image }}" alt="{{ member.name }}" class="img-fluid">
           <h3 class="card-title" id="names"><a href="members/{{ member.slug }}.html">{{ member.name }}</a></h3>
         </div>
       </div>
     {% endfor %}
   </div>
+
+
+  <h2> 2021 Tour Dates </h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">City</th>
+        <th scope="col">Venue</th>
+      </tr>
+    </thead>
+    {% for show in queen.tour2021 %}
+    <tbody>
+      <tr>
+        <th scope="row">{{ show.date }}</th>
+        <td>{{ show.city }}</td>
+        <td>{{ show.venue }}</td>
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
 
 {% endblock %}
