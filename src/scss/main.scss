@@ -21,12 +21,12 @@
 // Import partials
 @import "nav";
 
-h3 {
-  font-size: 1.5rem;
-}
-
 @import "jumbotron";
 
 @import "cards";
 
 @import "table";
+
+h3 {
+  font-size: 1.5rem;
+}

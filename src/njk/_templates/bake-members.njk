@@ -13,10 +13,9 @@
           <img src="../img/members/{{ image }}" alt="{{ member.name }}" class="img-fluid mb-4">
       </div>
       <div class="col-sm-8">
-          <h1>{{ name }} ({{instruments}}) </h1>
-          <h6> Years active: {{ tenure }} | Birthplace: {{ birthplace }} | Date of Birth: {{ birthdate }}</h6>
-          <h5> </h5>
-          <h5> </h5>
+          <h1>{{ name }} </h1>
+          <h6> {{instruments}} | Years active: {{ tenure }}</h6>
+          <h6>Birthplace: {{ birthplace }} | Date of Birth: {{ birthdate }} </h6>
           <p>{{ description | safe }}</p>
       </div>
     </div>
